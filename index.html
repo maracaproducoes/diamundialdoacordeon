@@ -10,23 +10,21 @@
   <meta property="og:title" content="Dia Mundial do Acordeon – Pato Branco" />
   <meta property="og:description" content="Shows, oficinas, mateada e celebração da cultura sul-brasileira." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="FOTOS2025/_MAT109.jpg" />
+  <meta property="og:image" content="./FOTOS2025/_MAT109.jpg" />
   <meta property="og:url" content="https://diamundialdoacordeon.com.br/" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Fontes: carregamento rápido e acessível -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
   <link rel="icon" href="LOGOMARCAS/logomarca dia mundial.png" />
+
   <style>
     :root{--roxo:#4a148c;--roxo-2:#7b1fa2;--dourado:#FFC107;--texto:#333}
     *{box-sizing:border-box;margin:0;padding:0}
     html:focus-within{scroll-behavior:smooth}
-    body{font-family:'Lato',sans-serif;line-height:1.6;color:var(--texto);}
+    body{font-family:'Lato',sans-serif;line-height:1.6;color:var(--texto)}
     h1,h2,h3{font-family:'Playfair Display',serif}
-    a{color:inherit}
+    a{color:inherit;text-decoration:none}
     .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
     /* Skip link */
@@ -37,7 +35,6 @@
     .nav{position:sticky;top:0;z-index:1000;backdrop-filter:saturate(160%) blur(8px);transition:background .25s, box-shadow .25s, border-color .25s;border-bottom:1px solid transparent}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
     .brand{font-weight:800;letter-spacing:.2px;color:#2d1b4e}
-    .nav a{text-decoration:none}
     .menu{display:flex;gap:18px;align-items:center}
     .menu a{font-size:.95rem;opacity:.92;position:relative;padding:6px 2px;transition:color .2s, opacity .2s}
     .menu a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:2px;background:linear-gradient(90deg,#FFC107,#FFD54F);transform:scaleX(0);transform-origin:left;transition:transform .25s}
@@ -46,66 +43,54 @@
     .menu a.is-active::after{transform:scaleX(1)}
     .nav--top{background:transparent}
     .nav--scrolled{background:rgba(255,255,255,.85);box-shadow:0 8px 24px rgba(0,0,0,.08);border-color:rgba(74,20,140,.1)}
-    .btn{display:inline-block;background:var(--dourado);color:var(--roxo);padding:10px 18px;border-radius:999px;font-weight:700}
-    .btn-outline{background:transparent;border:2px solid var(--roxo);color:var(--roxo)}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
-    .brand{font-weight:700;letter-spacing:.2px}
-    .nav a{text-decoration:none}
-    .menu{display:flex;gap:18px;align-items:center}
-    .menu a{font-size:.95rem;opacity:.9}
-    .nav--top{background:transparent}
-    .nav--scrolled{background:rgba(255,255,255,.85);box-shadow:0 2px 16px rgba(0,0,0,.08)}
-    .btn{display:inline-block;background:var(--dourado);color:var(--roxo);padding:10px 18px;border-radius:999px;font-weight:700}
-    .btn-outline{background:transparent;border:2px solid var(--roxo);color:var(--roxo)}
 
+    /* ===== HERO ===== */
     header.hero{position:relative;min-height:70vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--roxo) 0%,var(--roxo-2) 100%);overflow:hidden}
-    .video-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3}
+    .video-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}
     .header-content{position:relative;z-index:1;text-align:center;padding-top:50px}
     .logo-evento{max-width:560px;width:100%;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5))}
-    .cta{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
-    section{padding:90px 0}
+    /* ===== SEÇÕES ===== */
+    section{padding:90px 0;transition:background-color .6s ease,color .6s ease}
     .section-title{font-size:clamp(1.8rem,3vw,3rem);margin-bottom:16px;color:var(--roxo);text-align:center;letter-spacing:.2px;position:relative}
     .section-title::after{content:"";display:block;width:84px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--dourado),#FFE082);margin:14px auto 0;opacity:.95}
     .section-subtitle{font-family:'Playfair Display',serif;font-style:italic;color:#4a148c;letter-spacing:.3px;text-align:center;margin:20px auto 56px;max-width:860px;line-height:1.85;position:relative}
     .section-subtitle::after{content:"";width:84px;height:3px;border-radius:2px;background:linear-gradient(90deg,#FFC107,#FFD54F);display:block;margin:14px auto 0;opacity:.95}
-    .section-subtitle em{font-style:normal;color:#444}
 
-    .sobre{background:#f9f9f9}
+    /* Tons institucionais + camadas */
+    .sobre{background:#f9f9f9;border-radius:0 0 48px 48px;box-shadow:0 0 60px rgba(74,20,140,.05) inset}
+    .realizacao{background:#ffffff;border-radius:0 0 48px 48px;box-shadow:0 0 60px rgba(74,20,140,.05) inset}
+    .edicoes{background:#faf5ff;border-radius:0 0 48px 48px;box-shadow:0 0 60px rgba(74,20,140,.05) inset}
+    .edicao-section{background:#ffffff;border-radius:0 0 48px 48px;box-shadow:0 0 60px rgba(74,20,140,.05) inset}
+    .edicao-section:nth-of-type(even){background:#fffaf0}
+    .agradecimento{border-radius:0 0 48px 48px;box-shadow:0 0 60px rgba(255,255,255,.06) inset}
+
+    /* Conteúdos */
     .sobre-content{max-width:900px;margin:0 auto;text-align:center}
     .sobre-content p{font-size:1.1rem;line-height:1.8;margin-bottom:18px;color:#555}
-
     .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:42px}
     .stat-item{text-align:center;padding:28px 20px;background:#fff;border-radius:12px;box-shadow:0 5px 20px rgba(74,20,140,.08);transition:transform .2s}
     .stat-item:hover{transform:translateY(-4px)}
     .stat-number{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:700;color:var(--dourado);margin-bottom:6px}
     .stat-label{font-size:1rem;color:var(--roxo);text-transform:uppercase;letter-spacing:.06em}
 
-    .realizacao{background:#fff}
     .logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:40px;align-items:center;justify-items:center;margin-top:40px}
     .logo-box{text-align:center}
     .logo-label{font-size:.85rem;color:var(--roxo);margin-bottom:14px;text-transform:uppercase;letter-spacing:.12em;font-weight:700}
     .logo-box img{max-width:220px;height:auto;transition:transform .25s}
     .logo-box img:hover{transform:scale(1.04)}
 
-    .edicoes{background:#f9f9f9}
     .grid-edicoes{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
-    .card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:transform .25s, box-shadow .25s;text-decoration:none;color:inherit}
+    .card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:transform .25s, box-shadow .25s}
     .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(74,20,140,.18)}
     .card-head{background:linear-gradient(135deg,var(--roxo) 0%,var(--roxo-2) 100%);color:#fff;padding:32px 18px;text-align:center}
     .card-ano{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;margin-bottom:6px}
     .card-num{font-size:1rem;opacity:.9}
     .card-body{padding:22px;text-align:center}
     .card-txt{font-size:1rem;color:#555;margin-bottom:8px}
-    .card .btn{margin-top:10px}
 
-    .edicao-section{padding:80px 0;background:#fff}
-    .edicao-section:nth-of-type(even){background:#f9f9f9}
     .edicao-content{max-width:900px;margin:0 auto 28px}
     .edicao-intro{font-size:1.1rem;line-height:1.8;color:#555;margin-bottom:18px}
-    .back-btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;border:1.5px solid var(--roxo);color:var(--roxo);text-decoration:none;font-weight:600;transition:all .2s;box-shadow:0 1px 0 rgba(0,0,0,.03)}
-    .back-btn:hover{background:rgba(74,20,140,.06)}
-    .back-btn svg{width:18px;height:18px;flex:0 0 18px}
 
     .video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;box-shadow:0 10px 36px rgba(0,0,0,.18);margin-bottom:26px}
     .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
@@ -126,19 +111,21 @@
     .lb-prev{left:-18px}
     .lb-next{right:-18px}
 
-    .save-date{text-align:center;padding:56px 20px;background:linear-gradient(135deg,var(--roxo) 0%,var(--roxo-2) 100%);color:#fff;border-radius:18px;max-width:820px;margin:0 auto}
-    .save-date h3{font-size:1.8rem;margin-bottom:10px}
-    .save-date-number{font-size:3rem;font-family:'Playfair Display',serif;color:var(--dourado);margin:18px 0}
-
-    .agradecimento{background:linear-gradient(135deg,var(--roxo) 0%,var(--roxo-2) 100%);color:#fff;text-align:center;padding:80px 20px}
+    .agradecimento{background:linear-gradient(135deg,var(--roxo),var(--roxo-2));color:#fff;text-align:center;padding:80px 20px}
     .agradecimento h2{font-size:clamp(1.8rem,3vw,3rem);margin-bottom:20px;color:#fff}
     .agradecimento p{font-size:1.15rem;line-height:1.8;max-width:820px;margin:0 auto 30px;opacity:.96}
     .agradecimento img{max-width:340px;filter:brightness(0) invert(1)}
 
     footer{background:#1a1a1a;color:#fff;padding:40px 0;text-align:center}
     .footer-content{display:flex;flex-direction:column;gap:14px;align-items:center}
-    .social-link{color:#fff;text-decoration:none;font-size:1rem}
+    .social-link{color:#fff}
     .social-link:hover{color:var(--dourado)}
+
+    /* FAB */
+    .fab{position:fixed;right:22px;bottom:22px;display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#4a148c,#7b1fa2);color:#fff;padding:10px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.25);text-decoration:none;transition:transform .2s, opacity .2s}
+    .fab[hidden]{opacity:0;pointer-events:none;transform:translateY(10px)}
+    .fab svg{width:18px;height:18px}
+    .fab-text{font-weight:700;letter-spacing:.2px}
 
     /* Responsivo */
     @media (max-width:1024px){.grid-edicoes{grid-template-columns:repeat(2,1fr)}}
@@ -151,8 +138,6 @@
       .logos{grid-template-columns:1fr}
       .lb-prev,.lb-next{display:none}
     }
-
-    /* Acessibilidade: reduz movimento */
     @media (prefers-reduced-motion: reduce){
       html:focus-within{scroll-behavior:auto}
       .gallery a:hover,.logo-box img:hover,.card:hover,.stat-item:hover{transform:none}
@@ -162,7 +147,7 @@
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-  <!-- ===== NAV FIXO ===== -->
+  <!-- NAV -->
   <nav class="nav nav--top" role="navigation" aria-label="Principal">
     <div class="container nav-inner">
       <a href="#topo" class="brand">Dia Mundial do Acordeon</a>
@@ -178,16 +163,13 @@
     </div>
   </nav>
 
+  <!-- HERO -->
   <header id="topo" class="hero" role="banner">
-    <video class="video-bg" autoplay muted loop playsinline preload="metadata" poster="FOTOS2025/_MAT109.jpg" aria-label="Vídeo de fundo com cenas do festival">
+    <video class="video-bg" autoplay muted loop playsinline preload="metadata" poster="./FOTOS2025/_MAT109.jpg" aria-label="Vídeo de fundo com cenas do festival">
       <source src="hero.mp4" type="video/mp4" />
     </video>
     <div class="header-content">
       <img src="LOGOMARCAS/logomarca dia mundial.png" alt="Logo Dia Mundial do Acordeon" class="logo-evento" />
-      <div class="cta" role="group" aria-label="Ações principais">
-        <a class="btn" href="#edicoes">Ver edições</a>
-        <a class="btn btn-outline" href="#edicao2025">Assistir 2025</a>
-      </div>
     </div>
   </header>
 
@@ -195,8 +177,8 @@
     <section id="sobre" class="sobre">
       <div class="container">
         <h2 class="section-title">Sobre o Evento</h2>
+        <p class="section-subtitle">O Dia Mundial do Acordeon celebra este instrumento como símbolo da identidade cultural do sul do Brasil. Realizado simultaneamente em mais de 30 cidades, o evento promove a democratização da cultura através da música tradicional.</p>
         <div class="sobre-content">
-          <p>O Dia Mundial do Acordeon celebra este instrumento como símbolo da identidade cultural do sul do Brasil. Realizado simultaneamente em mais de 30 cidades, o evento promove a democratização da cultura através da música tradicional.</p>
           <p>De mateada a oficinas, de shows a exposições, é um encontro democrático que reúne todas as idades para celebrar a cultura brasileira e tudo que nela se reflete.</p>
         </div>
         <div class="stats" aria-label="Números do festival">
@@ -210,6 +192,7 @@
     <section id="realizacao" class="realizacao">
       <div class="container">
         <h2 class="section-title">Realização e Apoio</h2>
+        <p class="section-subtitle">A articulação de instituições e parceiros que tornam este encontro possível.</p>
         <div class="logos">
           <div class="logo-box">
             <div class="logo-label">Realização</div>
@@ -270,7 +253,7 @@
             </div>
             <div class="card-body">
               <p class="card-txt">Diego Guerro + Los Nunes</p>
-              <p class="card-txt">1.000+ pessoas</p>
+              <!-- removido o público para 2024 -->
               <span class="btn">Ver mais</span>
             </div>
           </a>
@@ -292,13 +275,13 @@
 
     <section id="edicao2026" class="edicao-section" aria-labelledby="t-2026">
       <div class="container">
-        <div class="save-date">
-          <h3 id="t-2026">4ª Edição</h3>
-          <div class="save-date-number">2026</div>
+        <div class="save-date" style="text-align:center;padding:56px 20px;background:linear-gradient(135deg,var(--roxo),var(--roxo-2));color:#fff;border-radius:18px;max-width:820px;margin:0 auto">
+          <h3 id="t-2026" style="font-size:1.8rem;margin-bottom:10px">4ª Edição</h3>
+          <div class="save-date-number" style="font-size:3rem;font-family:'Playfair Display',serif;color:var(--dourado);margin:18px 0">2026</div>
           <p>6 de maio de 2026</p>
           <p style="margin-top:12px">Em breve mais informações</p>
         </div>
-        <a class="back-btn" href="#edicoes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Voltar às edições</a>
+        <a class="back-btn" href="#edicoes" style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;border:1.5px solid var(--roxo);color:var(--roxo);text-decoration:none;font-weight:600;transition:all .2s;box-shadow:0 1px 0 rgba(0,0,0,.03);margin-top:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:18px;height:18px"><path d="M15 18l-6-6 6-6"/></svg>Voltar às edições</a>
       </div>
     </section>
 
@@ -306,17 +289,17 @@
       <div class="container">
         <h2 class="section-title" id="t-2025">3ª Edição – 2025</h2>
         <div class="edicao-content">
-          <p class="edicao-intro">Realizada em 3 de maio de 2025 no Largo da Liberdade (Pato Branco), com apresentações de Luciano Maia e André Ribas, mateada, painéis de LED e estrutura profissional. Patrocínio de ITAIPU Binacional e RPC.</p>
+          <p class="edicao-intro">A 3ª edição do Dia Mundial do Acordeon aconteceu em 3 de maio de 2025 no Largo da Liberdade, em Pato Branco. O festival reuniu centenas de pessoas para celebrar a música tradicional, com apresentações de Luciano Maia e André Ribas, além de acordeonistas locais. O evento começou com uma tradicional mateada às 18h30, seguida de shows e gastronomia com food trucks durante toda a noite. Com patrocínio da ITAIPU Binacional e RPC, a edição contou com estrutura compatível com grandes eventos, incluindo painéis de LED e sistema de som profissional.</p>
         </div>
         <div class="video-wrap">
           <iframe src="https://www.youtube-nocookie.com/embed/QS0MiS086Pc" title="Vídeo oficial 2025" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <div class="gallery" data-group="FOTOS2025">
-          <a class="lb" href="FOTOS2025/_MAT109.jpg"><img src="FOTOS2025/_MAT109.jpg" alt="Público no Dia Mundial do Acordeon 2025" loading="lazy"></a>
-          <a class="lb" href="FOTOS2025/_MAT126.jpg"><img src="FOTOS2025/_MAT126.jpg" alt="Palco com painéis de LED – 2025" loading="lazy"></a>
-          <a class="lb" href="FOTOS2025/_MAT130.jpg"><img src="FOTOS2025/_MAT130.jpg" alt="Acordeonistas no palco – 2025" loading="lazy"></a>
+          <a class="lb" href="./FOTOS2025/_MAT109.jpg"><img src="./FOTOS2025/_MAT109.jpg" alt="Público no Dia Mundial do Acordeon 2025" loading="lazy"></a>
+          <a class="lb" href="./FOTOS2025/_MAT126.jpg"><img src="./FOTOS2025/_MAT126.jpg" alt="Palco com painéis de LED – 2025" loading="lazy"></a>
+          <a class="lb" href="./FOTOS2025/_MAT130.jpg"><img src="./FOTOS2025/_MAT130.jpg" alt="Acordeonistas no palco – 2025" loading="lazy"></a>
         </div>
-        <a class="back-btn" href="#edicoes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Voltar às edições</a>
+        <a class="back-btn" href="#edicoes" style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;border:1.5px solid var(--roxo);color:var(--roxo);text-decoration:none;font-weight:600;transition:all .2s;box-shadow:0 1px 0 rgba(0,0,0,.03);margin-top:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:18px;height:18px"><path d="M15 18l-6-6 6-6"/></svg>Voltar às edições</a>
       </div>
     </section>
 
@@ -324,14 +307,14 @@
       <div class="container">
         <h2 class="section-title" id="t-2024">2ª Edição – 2024</h2>
         <div class="edicao-content">
-          <p class="edicao-intro">Programação especial em 6 de maio de 2024, com foco em sustentabilidade e homenagem ao RS; shows de Diego Guerro e Los Nunes, debates, poesia e exposição de instrumentos no Complexo Cultural de Pato Branco.</p>
+          <p class="edicao-intro">O dia 6 de maio de 2024 caiu em uma segunda-feira, em meio às enchentes que assolaram o Rio Grande do Sul. Por respeito às vítimas, foi escolhida uma programação mais intimista realizada no Complexo Cultural de Pato Branco. O evento expandiu suas temáticas, trazendo cenografia sustentável e promovendo debates sobre preservação ambiental. Com apresentações de Diego Guerro e Los Nunes (Argentina), a edição incluiu declamação de poesia em homenagem ao RS, roda de conversa sobre o acordeon na música latino-americana e exposição de instrumentos.</p>
         </div>
         <div class="gallery" data-group="FOTOS2024">
-          <a class="lb" href="FOTOS2024/DSC00735-Enhanced-NR.jpg"><img src="FOTOS2024/DSC00735-Enhanced-NR.jpg" alt="Apresentação musical 2024" loading="lazy"></a>
-          <a class="lb" href="FOTOS2024/DSC01033-Enhanced-NR.jpg"><img src="FOTOS2024/DSC01033-Enhanced-NR.jpg" alt="Público no Complexo Cultural 2024" loading="lazy"></a>
-          <a class="lb" href="FOTOS2024/DSC01377-Enhanced-NR.jpg"><img src="FOTOS2024/DSC01377-Enhanced-NR.jpg" alt="Cenografia sustentável 2024" loading="lazy"></a>
+          <a class="lb" href="./FOTOS2024/DSC00735-Enhanced-NR.jpg"><img src="./FOTOS2024/DSC00735-Enhanced-NR.jpg" alt="Apresentação musical 2024" loading="lazy"></a>
+          <a class="lb" href="./FOTOS2024/DSC01033-Enhanced-NR.jpg"><img src="./FOTOS2024/DSC01033-Enhanced-NR.jpg" alt="Público no Complexo Cultural 2024" loading="lazy"></a>
+          <a class="lb" href="./FOTOS2024/DSC01377-Enhanced-NR.jpg"><img src="./FOTOS2024/DSC01377-Enhanced-NR.jpg" alt="Cenografia sustentável 2024" loading="lazy"></a>
         </div>
-        <a class="back-btn" href="#edicoes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Voltar às edições</a>
+        <a class="back-btn" href="#edicoes" style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;border:1.5px solid var(--roxo);color:var(--roxo);text-decoration:none;font-weight:600;transition:all .2s;box-shadow:0 1px 0 rgba(0,0,0,.03);margin-top:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:18px;height:18px"><path d="M15 18l-6-6 6-6"/></svg>Voltar às edições</a>
       </div>
     </section>
 
@@ -339,15 +322,13 @@
       <div class="container">
         <h2 class="section-title" id="t-2023">1ª Edição – 2023</h2>
         <div class="edicao-content">
-          <p class="edicao-intro">Marco inicial em 6 de maio de 2023, com show de Renato Borghetti e presença da Orquestra Sanfônica de Pato Branco. Praça Presidente Vargas lotada, atividades formativas e celebração do acordeon.</p>
+          <p class="edicao-intro">A primeira edição do evento foi realizada em 6 de maio de 2023 e foi um marco da história cultural do acordeon no Brasil. Com show de Renato Borghetti, referência na música sul-brasileira, e apresentação da Orquestra Sanfônica de Pato Branco, o evento reuniu mais de 5.000 pessoas na Praça Presidente Vargas. A programação incluiu roda de chimarrão, exposição de acordeons, workshop e discotecagem de vinil, resgatando gravações históricas e a memória sonora do Paraná.</p>
         </div>
         <div class="video-wrap">
           <iframe src="https://www.youtube-nocookie.com/embed/xTZaQcjjVS4" title="Retrospectiva 2023" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-        <div class="gallery">
-          <div class="gallery-empty">Fotos em breve</div>
-        </div>
-        <a class="back-btn" href="#edicoes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Voltar às edições</a>
+        <div class="gallery"><div class="gallery-empty">Fotos em breve</div></div>
+        <a class="back-btn" href="#edicoes" style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;border:1.5px solid var(--roxo);color:var(--roxo);text-decoration:none;font-weight:600;transition:all .2s;box-shadow:0 1px 0 rgba(0,0,0,.03);margin-top:16px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:18px;height:18px"><path d="M15 18l-6-6 6-6"/></svg>Voltar às edições</a>
       </div>
     </section>
 
@@ -370,13 +351,13 @@
     </div>
   </footer>
 
-  <!-- Botão flutuante (badge) -->
+  <!-- FAB (Topo / Voltar às edições) -->
   <a id="fab" class="fab" href="#topo" aria-label="Voltar ao topo" hidden>
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
     <span class="fab-text">Topo</span>
   </a>
 
-  <!-- Lightbox overlay (nativo, sem biblioteca) -->
+  <!-- Lightbox overlay (nativo) -->
   <div class="lb-overlay" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visualização da imagem">
     <div class="lb-inner">
       <img class="lb-img" id="lbImg" alt="Imagem ampliada" />
@@ -386,20 +367,11 @@
     </div>
   </div>
 
-  <style>
-    /* FAB styles */
-    .fab{position:fixed;right:22px;bottom:22px;display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#4a148c,#7b1fa2);color:#fff;padding:10px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.2);border:1px solid rgba(255,255,255,.25);text-decoration:none;transition:transform .2s, opacity .2s}
-    .fab[hidden]{opacity:0;pointer-events:none;transform:translateY(10px)}
-    .fab svg{width:18px;height:18px}
-    .fab-text{font-weight:700;letter-spacing:.2px}
-    @media (max-width:768px){.fab{bottom:16px;right:16px}}
-  </style>
-
   <script>
     // Ano dinâmico
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Nav: alterna estilo quando rola
+    // Nav estado
     const nav = document.querySelector('.nav');
     const onScroll = () => {
       if (window.scrollY > 12) { nav.classList.add('nav--scrolled'); nav.classList.remove('nav--top'); }
@@ -408,48 +380,45 @@
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 
-    // ===== Scrollspy: destaca link ativo no menu =====
+    // Scrollspy
     const links = Array.from(document.querySelectorAll('.menu a')).filter(a=>a.getAttribute('href').startsWith('#'));
     const idByHref = new Map(links.map(a=>[a.getAttribute('href').slice(1), a]));
-    const observer = new IntersectionObserver((entries)=>{
+    const spy = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting){
-          const id = entry.target.id;
           links.forEach(a=>a.classList.remove('is-active'));
-          const link = idByHref.get(id);
+          const link = idByHref.get(entry.target.id);
           if(link) link.classList.add('is-active');
         }
       });
     }, {rootMargin:'-50% 0px -40% 0px', threshold:0});
     ['sobre','realizacao','edicoes','edicao2025','edicao2024','edicao2023'].forEach(id=>{
       const el = document.getElementById(id);
-      if(el) observer.observe(el);
+      if(el) spy.observe(el);
     });
 
-    // ===== FAB: mostra/oculta e alterna destino =====
+    // FAB: alterna destino conforme seção
     const fab = document.getElementById('fab');
     const editionIds = ['edicao2026','edicao2025','edicao2024','edicao2023'];
     const edObserver = new IntersectionObserver((entries)=>{
-      // Se qualquer edição estiver visível, muda para "Voltar às edições"
       const anyEditionVisible = entries.some(e=>e.isIntersecting);
       if(anyEditionVisible){
         fab.href = '#edicoes';
         fab.querySelector('.fab-text').textContent = 'Voltar às edições';
-        fab.querySelector('svg').innerHTML = '<path d="M15 18l-6-6 6-6"/>'; // seta para esquerda
+        fab.querySelector('svg').innerHTML = '<path d="M15 18l-6-6 6-6"/>';
       } else {
         fab.href = '#topo';
         fab.querySelector('.fab-text').textContent = 'Topo';
-        fab.querySelector('svg').innerHTML = '<path d="M12 19V5"/><path d="M5 12l7-7 7 7"/>'; // seta para cima
+        fab.querySelector('svg').innerHTML = '<path d="M12 19V5"/><path d="M5 12l7-7 7 7"/>';
       }
     }, {rootMargin:'-60% 0px -30% 0px', threshold:0});
     editionIds.forEach(id=>{ const el = document.getElementById(id); if(el) edObserver.observe(el); });
 
-    // Mostrar FAB após rolar um pouco
     const showFabOnScroll = () => { if (window.scrollY > 300) fab.removeAttribute('hidden'); else fab.setAttribute('hidden',''); };
     showFabOnScroll();
     window.addEventListener('scroll', showFabOnScroll, { passive:true });
 
-    // ===== Lightbox nativo =====
+    // Lightbox nativo
     const overlay = document.getElementById('lightbox');
     const lbImg = document.getElementById('lbImg');
     const btnClose = document.getElementById('lbClose');
@@ -459,7 +428,6 @@
     let currentIndex = 0;
     let currentGroup = '';
 
-    // Mapa de grupos -> lista de URLs
     const groups = {};
     document.querySelectorAll('.gallery').forEach(gal => {
       const group = gal.getAttribute('data-group') || 'default';
@@ -516,5 +484,4 @@
     });
   </script>
 </body>
-</html>
 </html>
