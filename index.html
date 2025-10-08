@@ -1,40 +1,4 @@
-<section id="edicao2026" class="edicao-section">
-        <div class="container">
-            <div class="save-date">
-                <h3>4ª Edição</h3>
-                <div class="save-date-number">2026</div>
-                <p>6 de maio de 2026</p>
-                <p style="margin-top: 20px;">Em breve mais informações</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="edicao2025" class="edicao-section">
-        <div class="container">
-            <h2 class="section-title">3ª Edição - 2025</h2>
-            <div class="edicao-content">
-                <p class="edicao-intro">A 3ª edição do Dia Mundial do Acordeon aconteceu em 3 de maio de 2025 no Largo da Liberdade, em Pato Branco. O festival reuniu centenas de pessoas para celebrar a música tradicional, com apresentações de Luciano Maia e André Ribas, além de acordeonistas locais. O evento começou com uma tradicional mateada às 18h30, seguida de shows e gastronomia com food trucks durante toda a noite. Com patrocínio da ITAIPU Binacional e RPC, a edição contou com estrutura compatível com grandes eventos, incluindo painéis de LED e sistema de som profissional.</p>
-            </div>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/QS0MiS086Pc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="gallery">
-                <div class="gallery-item"><img src="FOTOS2025/_MAT109.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT126.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT130.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="edicao2024" class="edicao-section">
-        <div class="container">
-            <h2 class="section-title">2ª Edição - 2024</h2>
-            <div class="edicao-content">
-                <p class="edicao-intro">O dia 6 de maio de 2024 caiu em uma segunda-feira, em meio às enchentes que assolaram o Rio Grande do Sul. Por respeito às vítimas, foi escolhida uma programação mais intimista realizada no Complexo Cultural de Pato Branco. O evento expandiu suas temáticas, trazendo cenografia sustentável e promovendo debates sobre preservação ambiental. Com apresentações de Diego Guerro e Los Nunes (Argentina), a edição reuniu mais de 1.000 pessoas e incluiu declamação de poesia em homenagem ao RS, roda de conversa sobre o acordeon na música latino-americana e exposição de instrumentos.</p>
-            </div>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="FOTOS2024/DS<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -179,7 +143,7 @@
 
         .logos-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 50px;
             align-items: center;
             justify-items: center;
@@ -432,6 +396,12 @@
             color: #FFC107;
         }
 
+        @media (max-width: 1024px) {
+            .edicoes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .section-title {
                 font-size: 2em;
@@ -452,6 +422,10 @@
             header {
                 height: 70vh;
             }
+
+            .logos-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -461,7 +435,7 @@
             <source src="vídeo página inicial.mp4" type="video/mp4">
         </video>
         <div class="header-content">
-            <img src="LOGOMARCAS/logomarca maraca.png" alt="Dia Mundial do Acordeon" class="logo-evento">
+            <img src="LOGOMARCAS/logomarca dia mundial.png" alt="Dia Mundial do Acordeon" class="logo-evento">
         </div>
     </header>
 
@@ -511,7 +485,9 @@
                 </div>
                 <div class="logo-box">
                     <div class="logo-label">Promoção</div>
-                    <img src="
+                    <img src="LOGOMARCAS/logomarca RPC.png" alt="RPC" style="max-width: 150px;">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -570,17 +546,30 @@
         </div>
     </section>
 
-    <section id="edicao2023" class="edicao-section">
+    <section id="edicao2026" class="edicao-section">
         <div class="container">
-            <h2 class="section-title">1ª Edição - 2023</h2>
+            <div class="save-date">
+                <h3>4ª Edição</h3>
+                <div class="save-date-number">2026</div>
+                <p>6 de maio de 2026</p>
+                <p style="margin-top: 20px;">Em breve mais informações</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="edicao2025" class="edicao-section">
+        <div class="container">
+            <h2 class="section-title">3ª Edição - 2025</h2>
             <div class="edicao-content">
-                <p class="edicao-intro">A primeira edição do evento foi realizada em 6 de maio de 2023 e foi um marco da história cultural do acordeon no Brasil. Com show de Renato Borghetti, referência na música sul-brasileira, e apresentação da Orquestra Sanfônica de Pato Branco, o evento reuniu mais de 5.000 pessoas na Praça Presidente Vargas. A programação incluiu roda de chimarrão, exposição de acordeons, workshop e discotecagem de vinil, resgatando gravações históricas e a memória sonora do Paraná.</p>
+                <p class="edicao-intro">A 3ª edição do Dia Mundial do Acordeon aconteceu em 3 de maio de 2025 no Largo da Liberdade, em Pato Branco. O festival reuniu centenas de pessoas para celebrar a música tradicional, com apresentações de Luciano Maia e André Ribas, além de acordeonistas locais. O evento começou com uma tradicional mateada às 18h30, seguida de shows e gastronomia com food trucks durante toda a noite. Com patrocínio da ITAIPU Binacional e RPC, a edição contou com estrutura compatível com grandes eventos, incluindo painéis de LED e sistema de som profissional.</p>
             </div>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/xTZaQcjjVS4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/QS0MiS086Pc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="gallery">
-                <div class="gallery-empty">Fotos em breve</div>
+                <div class="gallery-item"><img src="FOTOS2025/_MAT109.jpg" alt="Dia Mundial do Acordeon 2025"></div>
+                <div class="gallery-item"><img src="FOTOS2025/_MAT126.jpg" alt="Dia Mundial do Acordeon 2025"></div>
+                <div class="gallery-item"><img src="FOTOS2025/_MAT130.jpg" alt="Dia Mundial do Acordeon 2025"></div>
             </div>
         </div>
     </section>
@@ -605,44 +594,17 @@
         </div>
     </section>
 
-    <section id="edicao2025" class="edicao-section">
+    <section id="edicao2023" class="edicao-section">
         <div class="container">
-            <h2 class="section-title">3ª Edição - 2025</h2>
+            <h2 class="section-title">1ª Edição - 2023</h2>
             <div class="edicao-content">
-                <p class="edicao-intro">A 3ª edição do Dia Mundial do Acordeon aconteceu em 3 de maio de 2025 no Largo da Liberdade, em Pato Branco. O festival reuniu centenas de pessoas para celebrar a música tradicional, com apresentações de Luciano Maia e André Ribas, além de acordeonistas locais. O evento começou com uma tradicional mateada às 18h30, seguida de shows e gastronomia com food trucks durante toda a noite. Com patrocínio da ITAIPU Binacional e RPC, a edição contou com estrutura compatível com grandes eventos, incluindo painéis de LED e sistema de som profissional.</p>
+                <p class="edicao-intro">A primeira edição do evento foi realizada em 6 de maio de 2023 e foi um marco da história cultural do acordeon no Brasil. Com show de Renato Borghetti, referência na música sul-brasileira, e apresentação da Orquestra Sanfônica de Pato Branco, o evento reuniu mais de 5.000 pessoas na Praça Presidente Vargas. A programação incluiu roda de chimarrão, exposição de acordeons, workshop e discotecagem de vinil, resgatando gravações históricas e a memória sonora do Paraná.</p>
             </div>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/QS0MiS086Pc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/xTZaQcjjVS4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="gallery">
-                <div class="gallery-item"><img src="FOTOS2025/_MAT109.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT126.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT130.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT137 (1).jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT160.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT161 (1).jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT162.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT178.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT198.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT20 (1).jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT217 (1).jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT237.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT28 (1).jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT4.jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT57 (1).jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT85 (2).jpg" alt="Dia Mundial do Acordeon 2025"></div>
-                <div class="gallery-item"><img src="FOTOS2025/_MAT88 (1).jpg" alt="Dia Mundial do Acordeon 2025"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="edicao2026" class="edicao-section">
-        <div class="container">
-            <div class="save-date">
-                <h3>4ª Edição</h3>
-                <div class="save-date-number">2026</div>
-                <p>6 de maio de 2026</p>
-                <p style="margin-top: 20px;">Em breve mais informações</p>
+                <div class="gallery-empty">Fotos em breve</div>
             </div>
         </div>
     </section>
